@@ -30,7 +30,7 @@ do
 	for arquivo in pastas_dir
 	do
 		pasta="$pasta""-OR-*"
-		if [ $pasta = $arquivos ]
+		if [ "$pasta"* == "$arquivos" ]
 		then
 			$(mv $arquivos pasta_trabalho)
 		fi
